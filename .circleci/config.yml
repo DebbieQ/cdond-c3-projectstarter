@@ -214,7 +214,7 @@ jobs:
       - install_awscli
       - install_ansible
       - add_ssh_keys:
-          fingerprints: ["63:0b:30:ec:11:80:ca:74:15:f4:21:7d:f8:57:30:cd"]
+          fingerprints: ["6a:f4:d5:c7:6d:38:48:61:f3:af:75:60:7a:e4:26:69"]
       - attach_workspace:
           at: ~/
       - run:
@@ -290,7 +290,7 @@ jobs:
       - install_ansible
       - install_nodejs
       - add_ssh_keys:
-          fingerprints: ["63:0b:30:ec:11:80:ca:74:15:f4:21:7d:f8:57:30:cd"]
+          fingerprints: ["6a:f4:d5:c7:6d:38:48:61:f3:af:75:60:7a:e4:26:69"]
       - attach_workspace:
           at: ~/
       - restore_cache:
@@ -380,7 +380,7 @@ jobs:
             aws cloudformation deploy \
               --template-file .circleci/files/cloudfront.yml \
               --parameter-overrides WorkflowID="${CIRCLE_WORKFLOW_ID:0:7}" \
-              --stack-name Initialstack
+              --stack-name InitialStack
       - destroy-environment
       - revert-migrations
 
